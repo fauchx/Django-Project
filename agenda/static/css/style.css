@@ -1,0 +1,141 @@
+h1,h2,h3,h4{
+    font-family: var(--font-main);
+}
+
+*{
+    font-family: var(--font-text);
+    color: var(--text);
+}
+:root{
+    --font-main: basket;
+    --font-text: song;
+    --back: #ffadbf;
+    --title: #679b9b;
+    --text: #637373;
+    --sal: #ff9a76;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: song;
+    src: url("../fonts/Please\ write\ me\ a\ song.ttf");
+}
+
+@font-face {
+    font-family: basket;
+    src: url("../fonts/Basketball.otf");
+}
+
+/*Layout settings*/
+nav{
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--back);
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    padding: 10px;
+}
+
+nav ul li a:hover{
+    color: var(--text)
+}
+main{
+    display: flex;
+    width: 100vw;
+    margin: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lista{
+    display: flex;
+    border: 1px solid var(--text);
+    width: 50%;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+.lista li{
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-dlt{
+    background-color: red;
+    color: white;
+}
+
+.btn-dlt:hover{
+    background-color: white;
+    color: red;
+}
+
+
+.btn-ver{
+    background-color: var(--back);
+    color: white;
+}
+
+.btn-ver:hover{
+    background-color: white;
+    color: var(--back)
+}
+
+.btn-edt{
+    background-color: yellow;
+    color: white;
+}
+
+.btn-edt:hover{
+    background-color: white;
+    color:yellow
+}
+
+.search{
+    margin: 20px;
+    width: 50%;
+}
+
+.var{
+    padding: 8px;
+    width: 80%;
+}
+
+.btn-ser{
+    width: 15%;
+    background-color: #679b9b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
