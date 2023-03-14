@@ -8,7 +8,7 @@ Editar
 {% endblock "styles" %}
 {% block "content" %}
 <span class="btn">
-    <a href="{%url 'contact'%}"> Volver atras</a>
+    <a href="{%url 'todo'%}"> Volver atras</a>
 </span>
 {% if messages %}
 <ul class="messages">
@@ -18,7 +18,7 @@ Editar
 </ul>
 {% endif %}
 
-<form action="{% url 'contact_create' %}" method="POST">
+<form action="{% url 'todo_edit' id=id %}" method="POST">
     {% csrf_token %}
     <div class="form">
         <table>

@@ -1,0 +1,23 @@
+
+
+input{
+   outline: none;
+   box-shadow: none;
+   border: 2px solid var(--text); 
+   padding: 5px;
+   width: 100%;
+}
+
+.submit{
+    width: 80%;
+    padding: 10px 5px;
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: var(--back);
+}
+
+.boton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}

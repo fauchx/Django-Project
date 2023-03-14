@@ -4,4 +4,11 @@ Inicio
 {% endblock "title" %}
 {% block "content" %}
  <h1>Bienvenido a tu gestor personal</h1>
+ <div class="cards">
+       <a class="card" href="{% url 'todo' %}"> Tareas</a>
+    
+    
+        <a class="card" href="{% url 'contact' %}"> Contactos</a>
+    
+ </div>
 {% endblock "content" %}

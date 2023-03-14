@@ -18,7 +18,7 @@ Editar
 </ul>
 {% endif %}
 
-<form action="{% url 'contact_create' %}" method="POST">
+<form action="{% url 'contact_edit' id=id %}" method="POST">
     {% csrf_token %}
     <div class="form">
         <table>

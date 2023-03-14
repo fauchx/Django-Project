@@ -1,0 +1,34 @@
+{% extends 'layout/base.html' %}
+{% block "title" %}
+Editar
+{% endblock "title" %}
+{% block "styles" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock "styles" %}
+{% block "content" %}
+<span class="btn">
+    <a href="{%url 'todo'%}"> Volver atras</a>
+</span>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="alert-success"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form action="{% url 'todo_create' %}" method="POST">
+    {% csrf_token %}
+    <div class="form">
+        <table>
+        {{form.as_table}}
+        </table>
+        <div class="boton">
+        <button class="submit" type="submit">
+            Subir datos
+        </button>
+        </div>
+    </div>
+</form>
+{% endblock "content" %}

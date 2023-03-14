@@ -1,7 +1,10 @@
-from django.forms import ModelForm
-from .models import ToDo
+from django.forms import ModelForm, DateInput
+from .models import Todo
 
 class ToDoForm(ModelForm):
     class Meta:
-        model = ToDo
-        fields = "__all__"
+        model = Todo
+        exclude = ("date",)
+        widgets = {
+            'estimated_end': DateInput(attrs={"type":"date"}),
+        }
